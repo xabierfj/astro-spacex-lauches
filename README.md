@@ -36,4 +36,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ================================================
 
-Made with ❤️ by [Xabier Figueroa](https://github.com/xabierfj).Let's explore the stars together! 🌠
+Made with ❤️. Let's explore the stars together 🌠
