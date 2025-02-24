@@ -5,9 +5,10 @@ interface Props {
     success: boolean
     flightNumber: number
     details: string | null
+    date_utc: Date
 }
 
-const { success, img, flightNumber, details, id } = Astro.props
+const { success, img, flightNumber, details, id, date_utc } = Astro.props
 const launchStatus = success ? 'Success' : 'Failure'
 ---
 
@@ -23,6 +24,9 @@ const launchStatus = success ? 'Success' : 'Failure'
             "bg-red-400 text-red-900": !success,
         }]}>
             {launchStatus}
+        </span>
+        <span class="text-xs font-semibold text-gray-400">
+            {date_utc}
         </span>
         <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
             Flight #{flightNumber}

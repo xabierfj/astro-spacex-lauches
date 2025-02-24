@@ -13,7 +13,8 @@ const launches = await getLatestLaunches();
                 img={launch.links.patch.small}
                 success={launch.success}
                 flightNumber={launch.flight_number}
-                details={launch.details} />
+                details={launch.details}
+                date_utc={launch.date_utc} />
         ))
     }
 </div>

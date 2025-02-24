@@ -30,7 +30,9 @@ Welcome to **Astro SpaceX Launches**! This project is an application built with 
     
 *   [Node.js](https://nodejs.org/) - For running the development server.
 
-📜 License
------------
+TODO
+----
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+* Improve the design
+
+* Add a search function
