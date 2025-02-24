@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLaunchById } from '../../lib/spacex';
+
+export const prerender = false
+
+const { id } = Astro.params
+
+let launch
+if (id) {
+    launch = await getLaunchById(id);
+}
+
+---
+
+<Layout title='Lauch Details'>
+    <picture class="flex justify-center p-4">
+        <img class="mb-5 rounded-lg" src={launch?.links.patch.small} alt={`Patch for launch ${id}`}>
+    </picture>
+    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
+        Flight #{launch?.flight_number}
+    </h2>
+
+    <p class="mb-4 font-light text-gray-400">
+        {launch?.details}
+    </p>
+</Layout>

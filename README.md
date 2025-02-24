@@ -31,9 +31,6 @@ Welcome to **Astro SpaceX Launches**! This project is an application built with 
 *   [Node.js](https://nodejs.org/) - For running the development server.
 
 📜 License
+-----------
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-================================================
-
-Made with ❤️ by [Xabier Figueroa](https://github.com/xabierfj).Let's explore the stars together! 🌠
