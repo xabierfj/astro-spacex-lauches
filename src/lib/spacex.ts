@@ -8,12 +8,16 @@ export const getLaunchById = async (id: string) => {
     return launch;
 }
 
-export const getLatestLaunches = async () => {
+export const getAllLaunches = async () => {
+    const res = await fetch("https://api.spacexdata.com/v5/launches/past")
 
-    const res2 = await fetch("https://api.spacexdata.com/v4/launches/latest")
-    const latestLaunch = await res2.json() as Doc
-    //console.log(latestLaunch)
-    
+    const launches = (await res.json()) as Doc[]
+    launches.sort((a, b) => parseFloat(b.date_unix.toString()) - parseFloat(a.date_unix.toString()));
+    return launches;
+}
+
+export const getOldestLaunches = async () => {
+   
     const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
         method: "POST",
         headers: {
@@ -28,7 +32,7 @@ export const getLatestLaunches = async () => {
                 limit: 12,
             },
         }),
-    });
+    })
     const {docs: launches} = await res.json() as APISpaceXResponse
 
     return launches
