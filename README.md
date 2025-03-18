@@ -1,7 +1,7 @@
 🚀 Astro SpaceX Launches 🌌
 ===========================
 
-Welcome to **Astro SpaceX Launches**! This project is an application built with [Astro](https://astro.build/) that fetches and displays the latest SpaceX launch data.
+Welcome to **Astro SpaceX Launches**! This project is an application built with [Astro](https://astro.build/) following the [MiduDev](https://www.youtube.com/watch?v=RB5tR_nqUEw) that fetches and displays the latest SpaceX launch data.
 
 🌟 Features
 -----------
